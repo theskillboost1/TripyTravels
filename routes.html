@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-black navbar-dark fw-bold position-sticky top-0 w-100" style="z-index: 100;">
+        <div class="container">
+            <a class="navbar-brand ourtext" href="index.html"><span><img src="./images/download car.png" alt="" style="width: 120px;"></span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto text-white">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="gallery.html">Our Routes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="review.html">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Contact Us </a>
+                    </li>
+
+                </ul>
+                <form action="">
+
+                    <a class="btnhvr fw-bold" href="tel:9872736667">Book Cab </a>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="cotainer">
+            <div class="row mt-5">
+                <div class="col-md-8 m-auto text-center" >
+                    <h1 class="display-5 ourtext fw-bolder">Reliable Round-Trip Taxi Service at Your Fingertips</h1>
+                    <p>
+                        Our Reliable Round-Trip Taxi Service offers convenience and comfort at your fingertips. Whether you’re traveling for business or leisure, we ensure punctual pickups and smooth rides. With affordable fares and professional drivers, you can trust us for your entire journey. Book your round-trip taxi now for a seamless experience!.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row  justify-content-center flex-wrap">
+                    <div class="cardroute rounded dark p-2"  onclick="showPopup()" >
+                        <img src="./images/narkanda.jpg" class="card-img-top" alt="..." height="120px">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5>Chandigarh To Narkanda</h5>
+                                <p class="mb-0">
+                                    Enjoy comfortable rides with experienced drivers and explore the beauty of Himachal
+                                    Pradesh hassle-free. Affordable rates.</p>
+
+
+                            </div>
+                            <div class="cta-section p-md-2 p-0">
+                                <div><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" onclick="" class="btn btn-light m-0 mt-md-4 " >Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/chandigarh.jpg" class="card-img-top" alt="..." height="120px">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5> Narkanda To Chandigarh</h5>
+                                <p class="mb-0">
+                                    Enjoy comfortable rides with experienced drivers and explore the beauty of Himachal
+                                    Pradesh hassle-free. Affordable rates.</p>
+
+
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/rishikesh-tourism.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5>Chandigarh To Rishikesh</h5>
+                                <p class="mb-0">Travel with Tripy Travels for a comfortable, safe, and scenic Chandigarh to Rishikesh
+                                    journey, unforgettable views.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/chandigarh.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5>  Rishikesh To Chandigarh</h5>
+                                <p class="mb-0">Travel with Tripy Travels for a comfortable, safe, and scenic  Rishikesh to Chandigarh
+                                    journey, unforgettable views.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/dehra.jpeg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">Chandigarh to Dehradun</h5>
+                                <p class="card-text">SExperience a smooth, scenic Chandigarh to Dehradun journey with
+                                    Tripy Travels—comfort, safety, and stunning views.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/chandigarh.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">  Dehradun To Chandigarh</h5>
+                                <p class="card-text">SExperience a smooth, scenic Dehradun to  Chandigarh  journey with
+                                    Tripy Travels—comfort, safety, and stunning views.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/manali3.jpeg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">Delhi To Manali</h5>
+                                <p class="mb-0">Enjoy a comfortable, scenic Delhi to Manali journey with Tripy
+                                    Travels—safe, reliable, and memorable.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/delhi.webp" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title"> Manali To Delhi</h5>
+                                <p class="card-text">Enjoy a comfortable, scenic   Manali to Delhi journey with Tripy
+                                    Travels—safe, reliable, and memorable.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/chandigarh.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title"> Dharamshala To Chandigarh</h5>
+                                <p class="card-text">Travel from Chandigarh to Dharamshala with Tripy Travels for a
+                                    comfortable, scenic, and reliable journey.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/chandigarh.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">  Rishikesh To Chandigarh </h5>
+                                <p class="card-text">Embark on a scenic   Rishikesh to Chandigarh journey with Tripy
+                                    Travels for comfort and reliability.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star" id="rating"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/haridwar.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">Chandigarh to Haridwar</h5>
+                                <p class="card-text">Embark on a scenic Chandigarh to Haridwar journey with Tripy
+                                    Travels for comfort and reliability.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star" id="rating"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/chandigarh.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">  Haridwar To Chandigarh</h5>
+                                <p class="card-text">Embark on a scenic  Haridwar to Chandigarh  journey with Tripy
+                                    Travels for comfort and reliability.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star" id="rating"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cardroute rounded dark" >
+                        <img src="./images/dharmshala.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">Chandigarh to Dharamshala</h5>
+                                <p class="card-text">Embark on a scenic Chandigarh to Kausal journey with Tripy
+                                    Travels for comfort and reliability.</p>
+                            </div>
+                            <div class="cta-section p-md-2 p-0">
+                                <div><i class="fa fa-star" id="rating"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="chandigarh to dharamshala.html" class="btn btn-light  m-0 mt-md-4 mb-2 mb-2">Book Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/chandigarh.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">  Dharamshala To Chandigarh</h5>
+                                <p class="card-text">Embark on a scenic  Kausal to Chandigarh  journey with Tripy
+                                    Travels for comfort and reliability.</p>
+                            </div>
+                            <div class="cta-section p-md-2 p-0">
+                                <div><i class="fa fa-star" id="rating"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/Golden_Temple_reflecting_in_the_Sarovar,_Amritsar.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">Chandigarh to Amritsar</h5>
+                                <p class="card-text">Embark on a scenic Chandigarh to Amritsar journey with Tripy
+                                    Travels for comfort and reliability.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star" id="rating"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/chandigarh.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">  Amritsar To Chandigarh</h5>
+                                <p class="card-text">Embark on a scenic   Amritsar to Chandigarh journey with Tripy
+                                    Travels for comfort and reliability.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star" id="rating"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/Jammu-and-Kashmir-Srinagar.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">Chandigarh to Jammu</h5>
+                                <p class="card-text">Embark on a scenic Chandigarh to jammu journey with Tripy
+                                    Travels for comfort and reliability.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star" id="rating"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="cardroute rounded dark"  onclick="showPopup()">
+                        <img src="./images/chandigarh.jpg" class="card-img-top" height="120px" alt="...">
+                        <div class="card-bodyy">
+                            <div class="text-section p-md-2 p-0">
+                                <h5 class="card-title">  Jammu To Chandigarh</h5>
+                                <p class="card-text">Embark on a scenic   jammu to Chandigarh journey with Tripy
+                                    Travels for comfort and reliability.</p>
+                            </div>
+                            <div class="cta-section  p-md-2 p-0">
+                                <div><i class="fa fa-star" id="rating"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn btn-light  m-0 mt-md-4 mb-2">Book Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- <button class="btnhvr" style="width: 20%; margin-top: 10px;">Explore More</button> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container-fluid bg-black text-light" style="border-top: 1px solid black;">
+        <div class="container pb-5 ">
+            <footer>
+                <div class="row">
+                    <div class="col-md-4 p-md-0  pt-3">
+                        <div class="d-flex align-items-center imgggg pt-3">
+                            <img src="./images/newlogoBLACK.png" class="d-inline " alt="" height="100px">
+                            <!-- <div style="font-size: 20px; color: #5cd7b0;"> <b class="ps-2"> Online Taxi</b></div> -->
+                        </div>
+                        <h5 style="font-size: 13px; padding: 5px;" class="text-secondary"><b></b>
+                        </h5>
+                        <p class="me-3">Reliable and Convenient Tripy Travel Taxi Services | Serving Cities Across
+                            India |
+                            Book
+                            Your Rides with Ease
+                        </p><br>
+                        <ul class="d-flex ps-0 ">
+                            <a href="https://www.instagram.com/">
+                                <li style="height:35px;width:35px; background-color:rgb(162, 226, 46);"
+                                    class="d-flex me-1 shadow justify-content-center text-dark align-items-center ">
+                                    <b class="fa fa-instagram"></b>
+                                </li>
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <li style="height:35px;width:35px;; background-color: rgb(162, 226, 46); "
+                                    class="d-flex  mx-1 justify-content-center text-dark align-items-center  ">
+                                    <b class="fa fa-facebook"></b>
+                                </li>
+                            </a>
+                            <a href="https://www.twitter.com/">
+                                <li style="height:35px;width:35px;; background-color: rgb(162, 226, 46); "
+                                    class="d-flex mx-1 justify-content-center text-dark align-items-center ">
+                                    <b class="fa fa-twitter"></b>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 pt-3 ps-md-5">
+
+                        <div>
+                            <h2> Explore </h2><br>
+                            <ul type="none" class="ms-0 ps-0 ">
+                                <li><a href="./index.html" class="nav-link fw-normal">Home</a></li>
+
+                                <li><a href="#" class="nav-link fw-normal">About</a></li>
+                                <li><a href="#" class="nav-link fw-normal">Services</a></li>
+                                <li><a href="#" class="nav-link fw-normal">Reviews</a></li>
+                                <li><a href="#" class="nav-link fw-normal">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 pt-3">
+                        <h2>Contact Us </h2><br>
+                        <ul type="none" class="ms-0 ps-0 contactus" >
+                            <li class="fa fa-phone pb-2"> <a href="tel:98727-36667"
+                                    class=" text-decoration-none text-white">+(91)
+                                    98727-36667</a></li><br>
+                            <!-- <li class="fa fa-phone"> <a href="tel:96536-75538"
+                            class=" text-decoration-none text-black">+(91)
+                            -</a> </li><br> -->
+                            <li class="fa fa-envelope pb-3"><a href="mailto:tripytravel@gmail.com"
+                                    class=" text-decoration-none text-white"> tripytravel@gmail.com</a> </li><br>
+                            <li class="fa fa-map-marker	"> <a href="" class="text-white"> Sector 78, Mohali
+                                    <br>Punjab
+                                </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col pt-3">
+                        <section id="map-section">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.7930387639776!2d76.7834567753704!3d30.667955874615515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fec8230a9dd53%3A0x42c6835dc358b53a!2sShaheed%20Bhagat%20Singh%20International%20Airport%2C%20Chandigarh!5e0!3m2!1sen!2sin!4v1732278782059!5m2!1sen!2sin"
+                                width="100%" height="250" style="border:0;"></iframe>
+
+
+                        </section>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- end footer -->
+    <footer class=" p-2 border-top bg-dark">
+        <p class="text-light pb-0 text-center ">All copyrights &#169; reserved by<span
+                style="color:rgb(162, 226, 46)"> Trippy
+                Travel</span>
+        </p>
+
+    </footer>
+
+
+    <!-- popup -->
+
+
+    <div class="popup pt-3" id="popup">
+        <div class="d-flex justify-content-center align-items-center ">
+            <div class="popup-content  "style="">
+
+
+                <form action="https://tripytravels.onrender.com/create" onsubmit="a()" 
+                    class="header_form shadow p-3" method="post" style="width: 100%;">
+                    <div class="container" style="background-color: black;">
+                        <div class="" style="display: flex ;justify-content: space-between; align-items: center;">
+                            <img src="./images/newlogoBLACK.png" alt="" style="width: 100px">
+                            <button class="close-btn fa fa-close m-0" onclick="closePopup()" type="button"
+                                style="width: 35px; height:35px; background-color: white; border:none"></button>
+                        </div>
+                    </div>
+                    <h2 class="ourbg  p-1 text-center rounded my-2 ">Choose Cab</h2>
+                    <input type="text" placeholder="From City" name="from" id="name" class="m-0" required>
+                    <input type="text" placeholder="To City" name="to" required>
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="tel" id="mobileNumber" name="mobilenumber" placeholder="Mobile Number" 
+                    required pattern="^[0-9]{10}$" title="Please enter a valid 10-digit mobile number.">
+                    <input type="date" id="dateInput" name="date" min="" required>
+                    <select name="list" id="" required>
+                        <option value="Swift Dzire">Swift Dzire</option>
+                        <option value="Etios">Etios</option>
+                        <option value="Aura">Aura</option>
+                        <option value="Amaze">Amaze</option>
+                        <option value="Rumion">Rumion</option>
+                        <option value="Ertica">Ertica</option>
+                        <option value="Innova/Crysta">Innova/Crysta</option>
+                        <option value="Innova/Hycross">Innova/Hycross</option>
+
+
+
+                    </select>
+                    <button class="btnhvr fw-bold">Send Query</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- popup -->
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+        function closePopup() {
+            window.location.reload();
+            document.getElementById('popup').style.display = 'none';
+
+
+        }
+
+
+    </script>
+     <script>
+        function a() {
+
+
+
+
+            alert("YOUR DATA IS SUBMISTED WAIT CALL TO OUR SIDE")
+            open("./routes.html")
+
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>

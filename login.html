@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Admin</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #4CAF50;
+                /* Green background */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: white;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 400px;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                color: #333;
+            }
+
+            h2 {
+                margin-bottom: 20px;
+                color: #4CAF50;
+                /* Green color */
+            }
+
+            label {
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                text-align: left;
+                display: block;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                width: 90%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            input[type="submit"] {
+                background-color: #4CAF50;
+                /* Green background */
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+                width: 100%;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+                /* Darker green on hover */
+            }
+
+            .message {
+                margin-top: 20px;
+                font-weight: bold;
+            }
+
+            .success {
+                color: green;
+            }
+
+            .error {
+                color: red;
+            }
+        </style>
+    </head>
+
+<body>
+
+    <div class="container" id="myform" >
+        <h2>Login Admin</h2>
+        <form id="Forms" onsubmit="validateForm(event)">
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required><br>
+         
+                <input type="submit" value="Submit" >
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+  function validateForm(event) {
+    event.preventDefault(); 
+
+    var correctUsername = "Admin"; 
+    var correctPassword = "mypass";
+
+    var username = document.getElementById("username").value; 
+    var password = document.getElementById("password").value; 
+
+    console.log(username);
+    console.log(password);
+
+    if (username === correctUsername && password === correctPassword) {
+        document.getElementById("myform").style.display = "none";
+        open('./admin.html')
+    } else {
+        return false;
+    }
+}
+
+</script>
+
+
+
+
+
+
+
+<!-- <script>
+        var No = 1;
+
+        function handleDelete(id) {
+            console.log("Attempting to delete user with ID:", id);
+
+            fetch(`http://localhost:3000/delete/${id}`, {
+                method: 'DELETE',
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to delete user');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.message) {
+                        alert(data.message);
+                        location.reload();
+                    } else {
+                        alert('Failed to delete the user. Please try again.');
+                    }
+                })
+                .catch(err => {
+                    console.error('Error:', err);
+                    alert('An error occurred. Please try again.');
+                });
+        }
+
+
+
+
+
+
+
+        fetch('http://localhost:3000/dashboard')
+            .then(response => response.json())
+            .then(json => {
+                const outputElement = document.getElementById("output");
+                outputElement.innerHTML = '';
+
+                for (let i = 0; i < json.length; i++) {
+                    // const name = json[i].name;
+                    const username = json[i].username;
+                    const password = json[i].password;
+                  
+
+
+                    const id = json[i]._id;
+
+                    outputElement.innerHTML += `
+<tr>
+    <td>${No}</td>
+    <td>${username}</td>
+    <td>${password}</td>
+    
+
+
+    
+    <td><button onclick="handleDelete('${id}')" style="    background-color: rgb(162, 226, 46); color: black; padding: 7px 15px; border: none;">Delete</button></td>
+
+</tr>
+`;
+                    No = No + 1;
+                }
+            })
+
+
+
+
+            .catch(error => console.error('Error fetching data:', error));
+    </script> -->
+
+</body>
+
+</html>

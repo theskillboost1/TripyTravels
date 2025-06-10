@@ -1,0 +1,21 @@
+
+.boxxx img:hover {
+	transform: scale(1.1);
+}
+
+.boxxx {
+   
+	border: 1px solid black;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.boxxx img {
+	transition: 1s;
+
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px 10px rgb(251, 249, 249);
+
+}

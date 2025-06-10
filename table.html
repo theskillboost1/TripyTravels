@@ -1,0 +1,179 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="./css/style.css">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111; /* dark background for the whole page */
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: rgba(0, 0, 0, 0.875); /* dark background */
+            color: white;
+        }
+
+        th {
+            width: 200px;
+            border: 1px solid gainsboro;
+            background-color: rgba(12, 12, 12, 0.807);
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid gainsboro;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.6); /* darker rows for contrast */
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgba(0, 0, 0, 0.75); /* slightly lighter rows */
+        }
+
+
+    </style>
+    
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-black navbar-dark fw-bold position-sticky top-0 w-100" style="z-index: 100;">
+        <div class="container">
+            <a class="navbar-brand ourtext" href="index.html"><span style="font-size:34px">T</span>ripy<span
+                    class="text-white"><span style="font-size:34px">T</span>ravels</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto text-white">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="admin.html">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="table.html">Query</a>
+                    </li>
+
+                </ul>
+                <form action="https://tripytravels.onrender.com/create1">
+
+                    <a class="btnhvr fw-bold" href="tel:9872736667">Book Cab </a>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+    <table>
+        <thead>
+            <tr style="text-align: center;">
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Number</th>
+                <th>Address</th>
+                <th>writemessage</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody id="output">
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function handleDelete(id) {
+        console.log("Attempting to delete user with ID:", id);
+
+        fetch(`https://tripytravels.onrender.com/delete1/${id}`, {
+            method: 'DELETE',
+        })
+            .then(response => {
+
+                if (!response.ok) {
+                    throw new Error('Failed to delete user');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                    location.reload();
+                } else {
+                    alert('Failed to delete the user. Please try again.');
+                }
+            })
+            .catch(err => {
+                console.error('Error:', err);
+                alert('An error occurred. Please try again.');
+            });
+    }
+    var No = 1
+
+    fetch('https://tripytravels.onrender.com/dashboard1')
+        .then(response => response.json())
+        .then(json => {
+
+            const outputElement = document.getElementById("output");
+            outputElement.innerHTML = '';
+
+            for (let i = 0; i < json.length; i++) {
+                const Name = json[i].Name;
+                const Email = json[i].Email;
+                const Number = json[i].Number;
+                const Address = json[i].Address;
+                const writemessage= json[i].writemessage;
+
+                const id = json[i]._id;
+
+                outputElement.innerHTML += `
+                <tr>
+                    <td>${No}</td>
+
+                    <td>${Name}</td>
+                    <td>${Email}</td>
+                    <td>${Number}</td>
+                    <td>${Address}</td>
+                    <td>${writemessage}</td>
+
+                                            <td><button onclick="handleDelete('${id}')" style="    background-color: rgb(162, 226, 46); color: black; padding: 7px 15px; border: none;">Delete</button></td>
+
+                </tr>
+                `;
+                No= No +1
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+</script>
+
+</body>
+</html>
